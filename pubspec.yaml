@@ -12,3 +12,5 @@ environment:
 dependencies:
   html: ^0.15.0
   ical: ^0.1.4
+  http:
+  

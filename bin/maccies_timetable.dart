@@ -5,11 +5,9 @@ import 'dart:io' as io;
 import 'package:ical/serializer.dart';
 
 void main(List<String> arguments) {
-  print('I would like to die :)');
 
   // Opening the file
-  io.File ttFile = io.File("maccies_timetable_page/ess_notice_board.html");
-  // PATH TO FILE HERE      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  io.File ttFile = io.File(arguments[0]);
   Document ttHtml = parse(ttFile.readAsStringSync());
 
   // This class name is in all boxes with shift times
@@ -53,7 +51,7 @@ void main(List<String> arguments) {
       ) 
     );
   }
-  io.File calOut = io.File("out/shifts${weekStarting}.ics");
+  io.File calOut = io.File("shifts${weekStarting}.ics");
   var file = calOut.writeAsStringSync(shiftsCal.serialize());
 }
 

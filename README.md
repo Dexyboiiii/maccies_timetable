@@ -6,9 +6,7 @@ imma make mine and your lives easier - this thing eats employee clock views for 
 
 ## Look I'm new to this still
 
-You'll need Dart to run this, and obviously a login.
-As of now it will only run through an html file from peoplestuffuk.com, so log in and download the schedule yourself,
-place it in this project and change the open location in maccies_timetable.dart
+Download the webpage of your timetable as html, and run with the path to your file as the argument.
 
 ## Hopes and aspirations
 
